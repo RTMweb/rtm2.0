@@ -11,7 +11,7 @@
 					P: 813-354-1135<br />
 					E: inquiries@revealingtruth.org
 				</p>
-				<h4>Connect with us</h4>
+				<h4>Connect with Us</h4>
 				<div class="flex">
 					<svg class="icon">
 						<use xlink:href="/images/icons/sprite.svg#icon-facebook"></use>
