@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="absolute h-full bg-gray-50 z-10 flex flex-col p-4">
-			<nuxt-link to="/campus/tampa">Tampa</nuxt-link>
+			<nuxt-link to="/campus/tampa">Tampas</nuxt-link>
 			<nuxt-link to="/campus/wesleychapel">Wesley Chapel</nuxt-link>
 		</div>
 		<div ref="map" class="min-h-screen w-full"></div>
