@@ -2,7 +2,10 @@
 	<header :class="{ 'scrolled-nav': scrolledNav }">
 		<nav>
 			<nuxt-link :to="{ name: 'index' }" class="branding">
-				<img src="/images/RTMOfficialLogo-1.svg" alt="" class="image" />
+				<svg class="logo">
+					<use :xlink:href="'/images/icons/sprite.svg#icon-logo'"></use>
+				</svg>
+
 				<div class="text-blue-gray-50">RTM</div>
 			</nuxt-link>
 
@@ -77,7 +80,7 @@
 </script>
 
 <script setup>
-	import { ref, onMounted, onUpdated } from 'vue'
+	import { ref, onMounted, onUpdated, computed } from 'vue'
 
 	const scrolledNav = ref(null)
 	const mobile = ref(false)
@@ -157,10 +160,8 @@
 				@apply flex;
 				align-items: center;
 
-				.image {
-					@apply h-14 w-14;
-					box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-						0 2px 4px -1px rgba(0, 0, 0, 0.06);
+				.logo {
+					@apply h-12 w-12 fill-[#fff];
 				}
 			}
 
