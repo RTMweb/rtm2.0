@@ -2,7 +2,7 @@
 	<div class="mainlayout">
 		<NavigationBar :navigation-links="navigationLinks" />
 
-		<div :style="{ marginTop: 6.5 + 'rem' }">
+		<div :style="{ marginTop: 5 + 'rem' }">
 			<slot></slot>
 		</div>
 
@@ -83,7 +83,27 @@
 		}
 	])
 
+	const locations = ref([
+		{
+			campus: 'Tampa, FL Campus',
+			times: [
+				{
+					day: 'Sunday',
+					time: '9:00 AM'
+				},
+				{
+					day: 'Sunday',
+					time: '11:00 AM'
+				}
+			],
+			pastors: 'Bryan and Rashida Powe',
+			image: '',
+			video: ''
+		}
+	])
+
 	provide('sermons', series.value)
+	provide('locations', locations.value)
 </script>
 
 <style lang="scss">

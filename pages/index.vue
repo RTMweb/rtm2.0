@@ -1,13 +1,11 @@
 <template>
 	<div>
-		<div class="max-w-screen-lg mx-auto">
+		<div class="max-w-screen-lg mx-auto mt-4 px-4">
 			<MainCard
-				title="Heaven Is Enough Series"
-				subtitle="It Begins With A Decision"
-				bg-img="https://images.unsplash.com/photo-1625571281240-694bfa82e4c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+				bg-img="https://firebasestorage.googleapis.com/v0/b/revealing-truth-website.appspot.com/o/Images%2FHeroPastors.jpg?alt=media&token=c9e86338-7ce5-4b23-8619-0fc2136354a2"
 			/>
 		</div>
-		<ThreeCol class="mt-4">
+		<ThreeCol class="mt-4 px-4">
 			<template #left
 				><MainTile
 					bg-img="https://images.unsplash.com/photo-1625571281240-694bfa82e4c9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"

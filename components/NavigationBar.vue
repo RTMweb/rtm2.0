@@ -135,7 +135,7 @@
 
 			ul,
 			.link {
-				font-size: 14px;
+				font-size: 12px;
 				font-weight: 500;
 				color: #fff;
 				list-style: none;
@@ -176,7 +176,7 @@
 				i {
 					cursor: pointer;
 					color: #fff;
-					font-size: 24px;
+					font-size: 20px;
 					transition: 0.8s ease all;
 				}
 			}

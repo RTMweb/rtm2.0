@@ -11,7 +11,9 @@ export default defineNuxtConfig({
     'nuxt-windicss',
     '@vueuse/core/nuxt'
   ],
-  
+  windicss: {
+    analyze: true
+  },
   build: {
     transpile: ['vue-agile'],
   },

@@ -1,10 +1,10 @@
 <template>
-	<header class="container h-md grid place-items-center">
+	<header class="container h-md grid place-items-center mt-4">
 		<div
 			class="main"
 			ref="player"
 			id="resi-video-player"
-			data-embed-id="c2673063-2297-4e26-b4c8-f809c09a853c"
+			data-embed-id="74114ee9-768f-4a71-ac63-a1e0dfb656c8"
 			keep-alive
 		></div>
 	</header>
@@ -25,11 +25,7 @@
 
 <script setup>
 	import { ref, onMounted } from 'vue'
-	const player = ref(null)
-
-	onMounted(() => {
-		console.log(player.value)
-	})
+	const { data } = await useFetch('')
 </script>
 
 <style lang="scss" scoped>
