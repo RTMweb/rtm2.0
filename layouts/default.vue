@@ -102,6 +102,43 @@
 		}
 	])
 
+	const hometiles = ref([
+		{
+			title: '',
+			subtitle: '',
+			smalltitle: '',
+			bgimg:
+				'https://ik.imagekit.io/cpds/Copy_of_RTM_Announcements___Backgrounds__64__r8Q6887yu.png',
+			link: 'https://revealingtruthdepartments.churchcenter.com/people/forms/148441',
+			view: 'true'
+		},
+		{
+			title: 'Founder’s Day',
+			subtitle: '',
+			smalltitle: '',
+			bgimg: '/FW22-Founders-bkgrd.jpg',
+			link: '/about',
+			view: 'true'
+		},
+		{
+			title: 'The Blueprint:',
+			subtitle: '',
+			smalltitle: 'Empowering Leaders Forward',
+			bgimg: '/blueprint.jpg',
+			link: 'https://www.facebook.com/groups/theblueprintleadership',
+			view: 'true'
+		},
+		{
+			title: 'Truth Connections:',
+			subtitle: '',
+			smalltitle: 'We’re Better Together',
+			bgimg: '/TruthConnections.jpg',
+			link: 'https://revealingtruthdepartments.churchcenter.com/groups',
+			view: 'true'
+		}
+	])
+
+	provide('hometiles', hometiles.value)
 	provide('sermons', series.value)
 	provide('locations', locations.value)
 </script>

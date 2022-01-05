@@ -46,6 +46,7 @@ module.exports = {
 		plugin(({ addComponents }) => {
 			const buttons = {
 				'.btn': {
+					width: '100%',
 					padding: '.5rem 1rem',
 					borderRadius: '.25rem',
 					fontSize: '.8rem',
@@ -58,6 +59,9 @@ module.exports = {
 					},
 					'&:hover': {
 						transform: 'translateY(-2px)'
+					},
+					'@media (min-width: 768px)': {
+						width: 'auto'
 					}
 				},
 				'.btn-yellow': {
@@ -65,6 +69,13 @@ module.exports = {
 					color: '#4D4D4D',
 					'&:hover': {
 						backgroundColor: '#a4ae00'
+					}
+				},
+				'.btn-white': {
+					backgroundColor: '#FAFAFA',
+					color: '#4D4D4D',
+					'&:hover': {
+						backgroundColor: '#cccccc'
 					}
 				},
 				'.btn-outline': {

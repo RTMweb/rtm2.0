@@ -7,6 +7,7 @@
 	>
 		<div class="hero-content">
 			<div
+				v-if="title"
 				class="hero-title font-black font-sofia hero-title-container text-blue-gray-50"
 			>
 				{{ title }}<br class="md:hidden" />
@@ -17,7 +18,7 @@
 			</div>
 			<div class="space-x-0 sm:space-y-4 md:space-x-4">
 				<button class="btn btn-yellow">Watch Sermons</button>
-				<button class="btn btn-outline">Watch More Sermons</button>
+				<button class="btn btn-outline mt-4 md:mt-0">Watch More Sermons</button>
 			</div>
 		</div>
 	</div>
