@@ -1,11 +1,11 @@
 <template>
-	<div class="flex">
+	<div class="flex gap-2 py-4">
 		<div>
 			<svg class="h-6 w-6">
 				<use :xlink:href="svg"></use>
 			</svg>
 		</div>
-		<h4 class="flex-grow">{{ text }}</h4>
+		<h4 class="mr-2 flex-grow">{{ text }}</h4>
 		<div v-if="externallink" class="">
 			<img src="/images/externalLinkIcon.svg" alt="" />
 		</div>
