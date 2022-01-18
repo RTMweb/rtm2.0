@@ -27,25 +27,50 @@
 			<SideMenuLink icon="icon-heart" text="Giving" :externallink="true" />
 		</SideMenuTile>
 
+		<SideMenuTile :head="'Watch Online'">
+			<div class="p-4">
+				<a href="" class="btn btn-blue w-full text-center inline-block"
+					>Watch us live</a
+				>
+			</div>
+		</SideMenuTile>
+
 		<SideMenuTile
 			:head="'RTM Mobile App'"
 			:subhead="'Wherever you go, take us with you!'"
 		>
-			<div class="flex space-x-2">
-				<img
-					class="w-full"
-					src="https://i.ibb.co/znhc102/app-store.png"
-					alt=""
-				/>
-				<img
-					class="w-full"
-					src="https://i.ibb.co/FYnwFYQ/google-play.png"
-					alt=""
-				/>
+			<div class="flex space-x-2 p-4">
+				<a href="">
+					<img
+						class="w-full"
+						src="https://i.ibb.co/znhc102/app-store.png"
+						alt=""
+					/>
+				</a>
+				<a href="">
+					<img
+						class="w-full"
+						src="https://i.ibb.co/FYnwFYQ/google-play.png"
+						alt=""
+					/>
+				</a>
 			</div>
 		</SideMenuTile>
 		<SideMenuTile :image="'/PushpayLogo.jpeg'">
-			<a href="" class="btn btn-yellow">Sign In</a>
+			<div class="p-4">
+				<a href="" class="btn btn-yellow w-full text-center inline-block"
+					>Sign In</a
+				>
+			</div>
+		</SideMenuTile>
+		<SideMenuTile :head="'Stay Connected to RTM'">
+			<SideMenuLink icon="icon-facebook" text="Facebook" :externallink="true" />
+			<SideMenuLink
+				icon="icon-instagram"
+				text="Instagram"
+				:externallink="true"
+			/>
+			<SideMenuLink icon="icon-youTube" text="Youtube" :externallink="true" />
 		</SideMenuTile>
 	</div>
 </template>

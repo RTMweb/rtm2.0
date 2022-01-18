@@ -16,32 +16,38 @@
 		{
 			name: 'about',
 			destination: '/about',
-			icon: ''
+			icon: '',
+			external: false
 		},
 		{
 			name: 'watch live',
-			destination: '/live',
-			icon: ''
+			destination: 'https://revealingtruth.online.church/',
+			icon: '',
+			external: true
 		},
 		{
 			name: 'get involved',
 			destination: '/getinvolved',
-			icon: 'man'
+			icon: 'man',
+			external: false
 		},
 		{
 			name: 'locations',
 			destination: '/locations',
-			icon: 'place'
+			icon: 'place',
+			external: false
 		},
 		{
 			name: 'sermons',
 			destination: '/sermons',
-			icon: 'play'
+			icon: 'play',
+			external: false
 		},
 		{
 			name: 'giving',
 			destination: '/giving',
-			icon: 'heart-two'
+			icon: 'heart-two',
+			external: false
 		}
 	])
 

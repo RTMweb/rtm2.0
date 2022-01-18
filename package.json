@@ -17,9 +17,11 @@
     "@originjs/vite-plugin-commonjs": "^1.0.1",
     "@vueuse/core": "^6.8.0",
     "swiper": "^7.2.0",
+    "vite-plugin-windicss": "^1.6.3",
     "vue-awesome-swiper": "^4.1.1",
     "vue-gtag-next": "^1.14.0",
     "vue-inline-svg": "^3.1.0",
-    "vue-svg-loader": "^0.16.0"
+    "vue-svg-loader": "^0.16.0",
+    "windicss": "^3.4.3"
   }
 }

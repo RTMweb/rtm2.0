@@ -64,6 +64,13 @@ module.exports = {
 						width: 'auto'
 					}
 				},
+				'.btn-blue': {
+					backgroundColor: '#0060A6',
+					color: '#FAFAFA',
+					'&:hover': {
+						backgroundColor: '#528dd8'
+					}
+				},
 				'.btn-yellow': {
 					backgroundColor: '#d9e021',
 					color: '#4D4D4D',

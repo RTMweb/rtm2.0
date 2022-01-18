@@ -11,9 +11,13 @@
 
 			<ul v-show="!mobile" class="navigation text-blue-gray-50">
 				<li v-for="(link, index) in navigationLinks" :key="index">
-					<nuxt-link :to="link.destination" class="link">{{
-						link.name
-					}}</nuxt-link>
+					<a :href="link.destination" v-if="link.external">{{ link.name }}</a>
+					<nuxt-link
+						:to="link.destination"
+						class="link"
+						v-if="!link.external"
+						>{{ link.name }}</nuxt-link
+					>
 				</li>
 			</ul>
 			<div class="icon">
