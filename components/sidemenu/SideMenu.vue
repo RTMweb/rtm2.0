@@ -29,7 +29,11 @@
 
 		<SideMenuTile :head="'Watch Online'">
 			<div class="p-4">
-				<a href="" class="btn btn-blue w-full text-center inline-block"
+				<a
+					href="https://revealingtruth.online.church/"
+					rel="noopener noreferrer"
+					target="_blank"
+					class="btn btn-blue w-full text-center inline-block"
 					>Watch us live</a
 				>
 			</div>
@@ -47,7 +51,7 @@
 						alt=""
 					/>
 				</a>
-				<a href="">
+				<a href="" target="_blank" rel="noopener noreferrer">
 					<img
 						class="w-full"
 						src="https://i.ibb.co/FYnwFYQ/google-play.png"
@@ -58,7 +62,22 @@
 		</SideMenuTile>
 		<SideMenuTile :image="'/PushpayLogo.jpeg'">
 			<div class="p-4">
-				<a href="" class="btn btn-yellow w-full text-center inline-block"
+				<a
+					href="https://pushpay.com/login?ReturnUrl=%2fpushpay%2fredirect"
+					class="btn btn-yellow w-full text-center inline-block"
+					rel="noopener noreferrer"
+					target="_blank"
+					>Sign In</a
+				>
+			</div>
+		</SideMenuTile>
+		<SideMenuTile :head="'Planning Center'">
+			<div class="p-4">
+				<a
+					href="https://revealingtruthdepartments.churchcenter.com/home"
+					class="btn btn-yellow w-full text-center inline-block"
+					rel="noopener noreferrer"
+					target="_blank"
 					>Sign In</a
 				>
 			</div>

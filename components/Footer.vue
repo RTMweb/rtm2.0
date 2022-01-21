@@ -41,16 +41,16 @@
 		</div>
 		<div class="bg-secondaryDark">
 			<div class="container mx-auto p-4">
-				<div class="flex p-2 items-center">
-					<nuxt-link to="/" class="flex items-center text-white">
+				<div class="text-center pb-2">
+					<!-- <nuxt-link to="/" class="flex items-center text-white">
 						<svg class="h-6 w-6 mr-2 fill-current">
 							<use xlink:href="/images/icons/sprite.svg#icon-logo"></use>
 						</svg>
 						<div class="uppercase font-bold mr-4">
 							Revealing Truth Ministries
 						</div>
-					</nuxt-link>
-					<p class="text-sm text-secondaryLight">
+					</nuxt-link> -->
+					<p class="text-sm text-center text-secondaryLight">
 						Revealing Truth Ministries Christian Center | RTM Nation | Embracing
 						Legacy | Copyright All Rights Reserved © 2022
 					</p>
@@ -93,7 +93,7 @@
 	}
 
 	p {
-		@apply text-sm;
+		@apply text-sm tracking-wide;
 
 		span {
 			@apply font-bold;
