@@ -1,7 +1,13 @@
 <template>
 	<div>
-		<header class="bg-red-500 grid place-items-center">
-			<video class="video" ref="video" controls poster="/blueprint.jpg">
+		<header class="grid place-items-center">
+			<video
+				class="video"
+				ref="video"
+				width="100%"
+				controls
+				poster="/blueprint.jpg"
+			>
 				<source
 					src="https://firebasestorage.googleapis.com/v0/b/revealing-truth-website.appspot.com/o/video%2FJan16.mp4?alt=media&token=30fc83f6-de47-469a-a4ef-f8b3b3f3c02c"
 					type="video/mp4"
