@@ -2,11 +2,13 @@
 	<div>
 		<header class="grid place-items-center">
 			<video
-				class="video"
+				class="video aspect-video"
 				ref="video"
 				width="100%"
 				controls
-				poster="/blueprint.jpg"
+				preload="none"
+				style="object-fit: cover"
+				poster="https://firebasestorage.googleapis.com/v0/b/revealing-truth-website.appspot.com/o/Images%2FHeroPastors.jpg?alt=media&token=c9e86338-7ce5-4b23-8619-0fc2136354a2"
 			>
 				<source
 					src="https://firebasestorage.googleapis.com/v0/b/revealing-truth-website.appspot.com/o/video%2FJan16.mp4?alt=media&token=30fc83f6-de47-469a-a4ef-f8b3b3f3c02c"
