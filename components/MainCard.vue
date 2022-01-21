@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="hero grid min-h-xl w-full relative rounded-md p-4 content-end bg-center"
+		class="hero grid min-h-xl w-full relative rounded-md p-4 content-end bg-center dropshadow"
 		:style="{
 			backgroundImage: `url(${bgImg})`
 		}"

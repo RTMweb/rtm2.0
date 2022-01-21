@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="main grid w-full relative rounded-md content-end p-6 mb-4"
+		class="main grid w-full relative rounded-md content-end p-6 mb-4 dropshadow"
 		:style="{
 			backgroundImage: `url(${bgImg})`
 		}"

@@ -14,6 +14,15 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-agile'],
   },
+  windicss: {
+    scan: {
+      dirs: ['./'],
+      exclude: [
+        'node_modules',
+        'dist',
+      ],
+    },
+  },
   publicRuntimeConfig: {
     GOOGLE_KEY: process.env.GOOGLE_KEY
   }

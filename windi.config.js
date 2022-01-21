@@ -1,15 +1,8 @@
+import { defineConfig } from 'windicss/helpers'
 import colors from 'windicss/colors'
 import plugin from 'windicss/plugin'
 
-module.exports = {
-	attributify: true,
-	purge: [
-		'./components/**/*.{vue,js}',
-		'./layouts/**/*.vue',
-		'./pages/**/*.vue',
-		'./plugins/**/*.{js,ts}',
-		'./nuxt.config.{js,ts}'
-	],
+export default defineConfig({
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		container: {
@@ -98,4 +91,4 @@ module.exports = {
 		}),
 		require('windicss/plugin/aspect-ratio')
 	]
-}
+})
