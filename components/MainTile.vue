@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="main grid w-full relative rounded-md content-end p-6 mb-4 dropshadow"
+		class="main aspect-video grid w-full relative rounded-md content-end p-6 mb-4 dropshadow"
 		:style="{
 			backgroundImage: `url(${bgImg})`
 		}"
@@ -52,7 +52,7 @@
 </script>
 <style scoped lang="scss">
 	.main {
-		height: 400px;
+		width: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;

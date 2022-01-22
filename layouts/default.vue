@@ -119,10 +119,26 @@
 			view: 'true'
 		},
 		{
-			title: 'Founder’s Day',
+			title: '',
 			subtitle: '',
 			smalltitle: '',
-			bgimg: '/FW22-Founders-bkgrd.jpg',
+			bgimg: '/churchonline.jpg',
+			link: '/about',
+			view: 'true'
+		},
+		{
+			title: '',
+			subtitle: '',
+			smalltitle: '',
+			bgimg: '/embracinglegacytile.png',
+			link: '/about',
+			view: 'true'
+		},
+		{
+			title: '',
+			subtitle: '',
+			smalltitle: '',
+			bgimg: '/founderdday2022-tile.jpg',
 			link: '/about',
 			view: 'true'
 		},

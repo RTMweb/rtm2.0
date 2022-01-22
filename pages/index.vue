@@ -2,7 +2,7 @@
 	<div>
 		<header class="grid place-items-center">
 			<video
-				class="video aspect-video"
+				class="video aspect-video max-h-2xl"
 				ref="video"
 				width="100%"
 				controls
