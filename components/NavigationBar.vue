@@ -6,7 +6,7 @@
 					<use :xlink:href="'/images/icons/sprite.svg#icon-logo'"></use>
 				</svg>
 
-				<div class="text-blue-gray-50">RTM</div>
+				<div class="text-blue-gray-50 text-4xl font-black ml-2">RTM</div>
 			</nuxt-link>
 
 			<ul v-show="!mobile" class="navigation text-blue-gray-50">

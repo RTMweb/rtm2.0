@@ -8,23 +8,32 @@
 				icon="icon-Truth-Connections"
 				text="Truth Connections"
 				:externallink="false"
+				to="/getinvolved"
 			/>
 			<SideMenuLink
 				icon="icon-volunteer"
 				text="Volunteer"
 				:externallink="false"
+				to="/getinvolved"
 			/>
 			<SideMenuLink
 				icon="icon-heart-moniter"
 				text="Outreach"
 				:externallink="false"
+				to="/getinvolved"
 			/>
 			<SideMenuLink
 				icon="icon-ministry-groups"
 				text="Ministry Groups"
 				:externallink="false"
+				to="/getinvolved"
 			/>
-			<SideMenuLink icon="icon-heart" text="Giving" :externallink="true" />
+			<SideMenuLink
+				icon="icon-heart"
+				text="Giving"
+				:externallink="true"
+				to="https://pushpay.com/g/revealingtruth?appVersion=&clickOrigin=&itemId=&utm_medium=social&utm_source=linktree&utm_campaign=giving&ltclid=6bff1693-6209-48cf-92f2-4ad8dc377d3c"
+			/>
 		</SideMenuTile>
 
 		<SideMenuTile :head="'Watch Online'">
@@ -44,14 +53,22 @@
 			:subhead="'Wherever you go, take us with you!'"
 		>
 			<div class="flex space-x-2 p-4">
-				<a href="">
+				<a
+					href="https://apps.apple.com/us/app/revealing-truth/id1445042097?mt=8"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<img
 						class="w-full"
 						src="https://i.ibb.co/znhc102/app-store.png"
 						alt=""
 					/>
 				</a>
-				<a href="" target="_blank" rel="noopener noreferrer">
+				<a
+					href="https://play.google.com/store/apps/details?id=io.pushpay.revealingtruth&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<img
 						class="w-full"
 						src="https://i.ibb.co/FYnwFYQ/google-play.png"
@@ -83,13 +100,24 @@
 			</div>
 		</SideMenuTile>
 		<SideMenuTile :head="'Stay Connected to RTM'">
-			<SideMenuLink icon="icon-facebook" text="Facebook" :externallink="true" />
+			<SideMenuLink
+				icon="icon-facebook"
+				text="Facebook"
+				:externallink="true"
+				to="https://www.facebook.com/revealingtruth/"
+			/>
 			<SideMenuLink
 				icon="icon-instagram"
 				text="Instagram"
 				:externallink="true"
+				to="https://www.instagram.com/revealingtruth/?hl=en"
 			/>
-			<SideMenuLink icon="icon-youTube" text="Youtube" :externallink="true" />
+			<SideMenuLink
+				icon="icon-youTube"
+				text="Youtube"
+				:externallink="true"
+				to="https://www.youtube.com/user/RevealingTruthOnline"
+			/>
 		</SideMenuTile>
 	</div>
 </template>
