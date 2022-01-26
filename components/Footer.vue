@@ -35,7 +35,13 @@
 				</div>
 				<div class="p-2">
 					<h4 class="head">Upcoming Events</h4>
-					<button class="btn btn-white">Events</button>
+					<a
+						href="https://revealingtruthdepartments.churchcenter.com/registrations"
+						class="btn btn-white"
+						rel="noopener noreferrer"
+						target="_blank"
+						>Events</a
+					>
 				</div>
 			</div>
 		</div>
@@ -93,7 +99,7 @@
 	}
 
 	p {
-		@apply text-sm tracking-wide;
+		@apply text-sm tracking-wide font-light;
 
 		span {
 			@apply font-bold;

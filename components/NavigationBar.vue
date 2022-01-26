@@ -158,6 +158,10 @@
 				&:hover {
 					@apply text-accent border-accent;
 				}
+
+				&.router-link-active {
+					@apply text-accent border-accent;
+				}
 			}
 
 			.branding {

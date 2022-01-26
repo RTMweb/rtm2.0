@@ -1,26 +1,28 @@
 <template>
-	<div
-		class="main aspect-video grid w-full relative rounded-md content-end p-6 mb-4 dropshadow"
-		:style="{
-			backgroundImage: `url(${bgImg})`
-		}"
-	>
-		<div class="text-white">
-			<div class="text-2xl font-extrabold title mb-2">
-				{{ title }}<br class="md:hidden" />
-				<span
-					class="font-light whitespace-normal md:(whitespace-nowrap ml-2)"
-					>{{ subtitle }}</span
-				>
-			</div>
-			<div class="subttext text-lg my-sm">
-				{{ subtext }}
-			</div>
-			<div class="actions mt-4">
-				<a class="btn btn-white" :href="link">Learn More</a>
+	<ClientOnly>
+		<div
+			class="main aspect-video grid w-full relative rounded-md content-end p-6 mb-4 dropshadow"
+			:style="{
+				backgroundImage: `url(${bgImg})`
+			}"
+		>
+			<div class="text-white">
+				<div class="text-2xl font-extrabold title mb-2">
+					{{ title }}<br class="md:hidden" />
+					<span
+						class="font-light whitespace-normal md:(whitespace-nowrap ml-2)"
+						>{{ subtitle }}</span
+					>
+				</div>
+				<div class="subttext text-lg my-sm">
+					{{ subtext }}
+				</div>
+				<div class="actions mt-4">
+					<a class="btn btn-white" :href="link">Learn More</a>
+				</div>
 			</div>
 		</div>
-	</div>
+	</ClientOnly>
 </template>
 
 <script>

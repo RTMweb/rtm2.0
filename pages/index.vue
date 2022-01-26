@@ -1,12 +1,11 @@
 <template>
 	<div>
-		<header class="grid place-items-center">
+		<div class="grid place-items-center">
 			<video
-				class="video aspect-video max-h-2xl"
+				class="aspect-video max-h-2xl"
 				ref="video"
 				width="100%"
 				controls
-				preload="none"
 				style="object-fit: cover"
 				poster="https://firebasestorage.googleapis.com/v0/b/revealing-truth-website.appspot.com/o/Images%2FHeroPastors.jpg?alt=media&token=c9e86338-7ce5-4b23-8619-0fc2136354a2"
 			>
@@ -15,11 +14,10 @@
 					type="video/mp4"
 				/>
 			</video>
-		</header>
+		</div>
+
 		<div class="max-w-screen-lg mx-auto mt-4 px-4">
-			<ClientOnly placeholder="...">
-				<MainCard bg-img="/HeroPastors.jpeg" />
-			</ClientOnly>
+			<MainCard bg-img="/HeroPastors.jpeg" />
 		</div>
 		<ThreeCol class="mt-4 px-4">
 			<template #left>
@@ -41,13 +39,18 @@
 </template>
 
 <script setup>
+	import { onMounted, ref } from 'vue'
 	import ThreeCol from '../components/layoutUtils/threeCol.vue'
 	import MainTile from '../components/MainTile.vue'
 	import SideMenu from '../components/sidemenu/SideMenu.vue'
-
 	import { inject } from 'vue'
 
+	const video = ref()
 	const tiles = inject('hometiles')
+
+	onMounted(() => {
+		console.log(video)
+	})
 </script>
 
 <style></style>
