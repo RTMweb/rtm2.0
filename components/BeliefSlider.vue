@@ -18,23 +18,29 @@
 			@reachBeginning="start = false"
 			@slideChange="onSlideChange"
 		>
-			<swiper-slide v-for="(slide, index) in slides" :key="index">
-				<div class="grid place-content-center border-accent">{{ slide }}</div>
+			<swiper-slide
+				v-for="(slide, index) in slides"
+				:key="index"
+				class="flex grid place-content-center"
+			>
+				<div class="border-accent text-white font-extralight h-auto">
+					{{ slide }}
+				</div>
 			</swiper-slide>
 		</Swiper>
-		<div class="w-full flex">
+		<div class="w-full inline-flex">
 			<div class="btn mr-auto flex items-center" v-show="start" @click="prev()">
-				<div>
+				<div class="bg-primary rounded-1/2 p-2">
 					<svg class="prev">
 						<use xlink:href="/images/icons/sprite.svg#triangle"></use>
 					</svg>
 				</div>
-				Back
+				<p class="text-white ml-2">Back</p>
 			</div>
 
 			<div class="btn ml-auto flex items-center" v-show="end" @click="next()">
-				More
-				<div>
+				<p class="text-white mr-2">More</p>
+				<div class="bg-primary rounded-1/2 p-2">
 					<svg class="next">
 						<use xlink:href="/images/icons/sprite.svg#triangle"></use>
 					</svg>
@@ -114,13 +120,13 @@
 	.next {
 		height: 30px;
 		width: 30px;
-		fill: red;
+		fill: #fff;
 		transform: rotate(90deg);
 	}
 	.prev {
 		height: 30px;
 		width: 30px;
-		fill: red;
+		fill: #fff;
 		transform: rotate(-90deg);
 	}
 	.swiper-slide {

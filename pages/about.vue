@@ -5,12 +5,13 @@
 			:subtitle="'We believe that truth makes a mark in people’s lives that can never be erased.'"
 			:img="'/about.jpg'"
 		/>
+
 		<section class="bg-cool-gray-100">
 			<div
-				class="container grid grid-cols-1 px-4 md:(grid-cols-3 mx-auto) py-12 gap-4"
+				class="container grid grid-cols-1 px-4 md:(grid-cols-3 mx-auto) py-20 gap-4"
 			>
 				<div>
-					<h2>Our Beliefs</h2>
+					<h3>Our Beliefs</h3>
 					<p>
 						We believe in Simple Truth. Truth - In everyday language, it’s
 						defined as being in one accord with fact or reality. Reality can
@@ -22,7 +23,7 @@
 					</p>
 				</div>
 				<div>
-					<h2>Our Values</h2>
+					<h3>Our Values</h3>
 					<p>
 						We affectionately Value: Peace which is our reward because we accept
 						Christ in our hearts; Prosperity which is our privilege because
@@ -35,7 +36,7 @@
 					</p>
 				</div>
 				<div>
-					<h2>Our Leadership</h2>
+					<h3>Our Leadership</h3>
 					<p>
 						Revealing Truth Ministries believes that truth, which is the Word of
 						God, causes people to experience God’s abundance in every area of
@@ -45,15 +46,22 @@
 				</div>
 			</div>
 		</section>
-		<BeliefSlider />
+		<section class="py-20 bg-secondaryDark text-center">
+			<h2 class="mr-auto text-white font-bold text-2xl mb-4">
+				We firmly believe
+			</h2>
+			<BeliefSlider />
+		</section>
 		<VisionSlider />
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+	import MainVideo from '~~/components/Video.vue'
+</script>
 
 <style scoped lang="scss">
-	h2 {
+	h3 {
 		@apply font-bold text-2xl text-secondary mb-2;
 	}
 
