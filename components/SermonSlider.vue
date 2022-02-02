@@ -1,7 +1,7 @@
 <template>
 	<swiper slidesPerView="1" @swiper="sermonSwiper" instanceName="sermon">
 		<swiper-slide v-for="(sermon, index) in series" key="index">
-			<Header :title="sermon.title" />
+			<Header :img="`/images/${sermon.id}.jpg`" />
 		</swiper-slide>
 	</swiper>
 	<div @click="prev()">prev</div>

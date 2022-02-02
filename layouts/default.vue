@@ -2,7 +2,7 @@
 	<div class="mainlayout">
 		<NavigationBar :navigation-links="navigationLinks" />
 
-		<div :style="{ marginTop: 5 + 'rem' }">
+		<div :style="{ marginTop: 5 + 'rem' }" class="">
 			<slot></slot>
 		</div>
 
@@ -45,9 +45,9 @@
 		},
 		{
 			name: 'giving',
-			destination: '/giving',
+			destination: 'https://pushpay.com/g/revealingtruth',
 			icon: 'heart-two',
-			external: false
+			external: true
 		}
 	])
 
@@ -86,6 +86,27 @@
 			image: '/images/PLnoMLl1eIRc7M2q48ZyGlwJQ4fn1FsRzr.jpg',
 			title: 'Built to last',
 			slug: 'built-to-last'
+		},
+		{
+			id: 'PLnoMLl1eIRc4493JoX452LtupLdHRBH_P',
+			description: 'Built to last Description',
+			image: '/images/PLnoMLl1eIRc7M2q48ZyGlwJQ4fn1FsRzr.jpg',
+			title: 'Mastermind Intensive',
+			slug: 'mastermind-intensive'
+		},
+		{
+			id: 'PLnoMLl1eIRc6mzQQn5PbsvobR6-Xl02oE',
+			description: 'Built to last Description',
+			image: '/images/PLnoMLl1eIRc6mzQQn5PbsvobR6-Xl02oE.jpg',
+			title: 'Soon Enough',
+			slug: 'soon-enough'
+		},
+		{
+			id: 'PLnoMLl1eIRc6mMrN3Tq5BbVREowKsiP2e',
+			description: 'Built to last Description',
+			image: '/images/PLnoMLl1eIRc6mMrN3Tq5BbVREowKsiP2e.jpg',
+			title: 'Contend 22',
+			slug: 'contend-22'
 		}
 	])
 
@@ -168,6 +189,7 @@
 <style lang="scss">
 	.container {
 		max-width: 1150px;
+		@apply px-4;
 	}
 
 	.dropshadow {
