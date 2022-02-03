@@ -1,6 +1,6 @@
 <template>
 	<div class="bg-dark-900 h-full">
-		<header class="container grid place-items-center pt-16">
+		<header class="container aspect-video grid place-items-center pt-16">
 			<iframe
 				ref="vid"
 				class="w-full aspect-video"

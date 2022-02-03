@@ -12,7 +12,7 @@
 						"
 					>
 						<div
-							class="main grid w-full relative rounded-md content-end p-4 mb-4"
+							class="main grid w-full aspect-video relative rounded-md content-end p-4 mb-4"
 							:style="{
 								backgroundImage: `url(${msg.image})`
 							}"
