@@ -28,7 +28,7 @@
 				@swiper="seriesSwiper"
 				:spaceBetween="20"
 				:breakpoints="{
-					640: { slidesPerView: 4 },
+					640: { slidesPerView: 2 },
 					768: {
 						slidesPerView: 4
 					},
@@ -39,12 +39,18 @@
 			>
 				<swiper-slide v-for="(vid, index) in videos" :key="vid.id" ref="el">
 					<div @click="handleClick(vid.snippet.resourceId.videoId)">
-						<div
-							class="main grid w-full relative rounded-md place-content-center p-4 mb-4 text-accent text-6xl"
-							:style="{
-								backgroundImage: `url(${vid.snippet.thumbnails.high.url})`
-							}"
-						></div>
+						<div class="holder rounded-md overflow-hidden mb-4">
+							<img
+								class="main block w-full h-auto rounded-md relative aspect-video object-cover"
+								:src="vid.snippet.thumbnails.high.url"
+							/>
+							<div
+								class="overlay-text text-white leading-none text-4xl font-bold uppercase z-10 grid place-content-center"
+							>
+								{{ vid.snippet.title.split('|')[0] }}
+							</div>
+							<div class="overlay bg-accent opacity-85"></div>
+						</div>
 						<h4 class="text-white text-sm">
 							{{ vid.snippet.title.split('|')[0] }}
 						</h4>
@@ -56,13 +62,13 @@
 			</Swiper>
 			<div
 				@click="prev()"
-				class="absolute prev bg-primary rounded-1/2 p-2 h-14 w-14 flex justify-center items-center"
+				class="hidden absolute prev bg-accent rounded-1/2 p-2 h-14 w-14 justify-center items-center sm:(flex)"
 			>
 				<i class="fas fa-chevron-left"></i>
 			</div>
 			<div
 				@click="next()"
-				class="absolute next bg-primary rounded-1/2 p-2 h-14 w-14 flex justify-center items-center"
+				class="hidden absolute next bg-accent rounded-1/2 p-2 h-14 w-14 justify-center items-center sm:(flex)"
 			>
 				<i class="fas fa-chevron-right"></i>
 			</div>
@@ -161,10 +167,43 @@
 
 <style lang="scss" scoped>
 	.main {
-		aspect-ratio: 14/ 7;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+	}
+
+	.holder {
+		position: relative;
+	}
+
+	.overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		width: 100%;
+		height: 0;
+		transition: 0.5s ease;
+		line-height: 0.8;
+	}
+	.overlay-text {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		width: 100%;
+		height: 0;
+		transition: 0.6s ease-in-out;
+		line-height: 0.8;
+	}
+
+	.holder:hover .overlay {
+		height: 100%;
+	}
+	.holder:hover .overlay-text {
+		height: 100%;
 	}
 
 	.prev {
@@ -206,9 +245,5 @@
 		&:hover {
 			opacity: 1;
 		}
-	}
-
-	pre {
-		@apply;
 	}
 </style>
