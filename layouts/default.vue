@@ -6,7 +6,7 @@
 			<slot></slot>
 		</div>
 
-		<Footer :navigation-links="navigationLinks" />
+		<!-- <Footer :navigation-links="navigationLinks" /> -->
 	</div>
 </template>
 
@@ -21,7 +21,7 @@
 		},
 		{
 			name: 'watch live',
-			destination: 'https://revealingtruth.online.church/',
+			destination: '/',
 			icon: '',
 			external: true
 		},
@@ -39,13 +39,13 @@
 		},
 		{
 			name: 'sermons',
-			destination: '/sermons',
+			destination: '/sermon',
 			icon: 'play',
 			external: false
 		},
 		{
 			name: 'giving',
-			destination: 'https://pushpay.com/g/revealingtruth',
+			destination: '/',
 			icon: 'heart-two',
 			external: true
 		}

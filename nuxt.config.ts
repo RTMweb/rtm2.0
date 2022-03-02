@@ -9,19 +9,16 @@ export default defineNuxtConfig({
   },
   buildModules: [
     'nuxt-windicss',
-    '@vueuse/core/nuxt'
+    '@vueuse/nuxt'
   ],
+  modules: ['nuxt-use-motion'],
   build: {
     transpile: ['vue-agile'],
   },
-  windicss: {
-    scan: {
-      dirs: ['./'],
-      exclude: [
-        'node_modules',
-        'dist',
-      ],
-    },
+  vite:{
+    server: {
+      
+	  }
   },
   publicRuntimeConfig: {
     GOOGLE_KEY: process.env.GOOGLE_KEY

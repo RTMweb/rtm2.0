@@ -4,7 +4,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 	let mapLoaded = false
 	let mapWaiting = null
 
-	const KEY = 'AIzaSyBDPjhlBvtIz1Am3U1SwDnQ5kPVxzJQMZY'
+	const KEY = nuxtApp.$config.GOOGLE_KEY
 	addScript()
 	return {
 		provide: {
@@ -18,7 +18,6 @@ export default defineNuxtPlugin((nuxtApp) => {
 		const script = document.createElement('script')
 		script.src = `https://maps.googleapis.com/maps/api/js?key=${KEY}&libraries=places&callback=initGoogleMaps`
 		script.async = true
-		console.log(script)
 		window.initGoogleMaps = initGoogleMaps
 		document.head.appendChild(script)
 	}
