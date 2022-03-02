@@ -1,72 +1,31 @@
 <template>
-	<header class="container aspect-video grid place-items-center pt-16">
-		<Suspense>
-			<iframe
-				ref="vid"
-				class="w-full aspect-video"
-				:src="`https://www.youtube.com/embed/${currentVideo}?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white&controls=1`"
-				frameborder="0"
-				color="green"
-				allowfullscreen
-			>
-			</iframe>
-		</Suspense>
-	</header>
-	<div class="bg-dark-900 h-full text-white">
-		<div class="container">
-			<mediaScroller>
-				<div
-					v-for="message in messages"
-					key="message.id"
-					@click="handleClick(message.resourceId)"
+	<div>
+		<header class="container aspect-video grid place-items-center pt-16">
+			<Suspense>
+				<iframe
+					ref="vid"
+					class="w-full aspect-video"
+					:src="`https://www.youtube.com/embed/${currentVideo}?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white&controls=1`"
+					frameborder="0"
+					color="green"
+					allowfullscreen
 				>
-					<img :src="message.image" />
-				</div>
-			</mediaScroller>
-		</div>
-		<!-- <Suspense>
-			<pre>
-		{{ messages[0].id }}
-		</pre
-			>
-			<template #fallback> Loading... </template>
-		</Suspense> -->
-		<!-- <header
-			class="container aspect-video grid place-items-center pt-16"
-			v-motion
-			:initial="{
-				y: -1000
-			}"
-			:enter="{
-				y: 0,
-				transition: {
-					duration: 1000,
-					delay: 200
-				}
-			}"
-		>
-			<iframe
-				ref="vid"
-				class="w-full aspect-video"
-				:src="`https://www.youtube.com/embed/${currentVideo}?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white&controls=1`"
-				frameborder="0"
-				color="green"
-				allowfullscreen
-			>
-			</iframe>
-		</header>   -->
-		<!-- <div class="container mt-10 mb-20">
-			<h1 class="text-white font-black text-3xl tracking-wide">
-				{{ currentTitle }}
-			</h1>
-			<div class="text-gray-400 font-bold tracking-wide my-2">
-				{{ currentPastor }} &bull;
-				<span class="font-thin">{{ currentDate }}</span>
+				</iframe>
+			</Suspense>
+		</header>
+		<div class="bg-dark-900 h-full text-white">
+			<div class="container">
+				<mediaScroller>
+					<div
+						v-for="message in messages"
+						key="message.id"
+						@click="handleClick(message.resourceId)"
+					>
+						<img :src="message.image" />
+					</div>
+				</mediaScroller>
 			</div>
-			<p class="text-gray-400 font-thin max-w-2xl min-h-40">
-				{{ currentDescription }}
-			</p>
-		</div>  -->
+		</div>
 	</div>
 </template>
 
@@ -78,9 +37,6 @@
 	const current = inject('current')
 	const messages = inject('messages')
 	const currentVideo = ref(messages[0])
-	// const series = ref([])
-	// series.value = await messages
-	// console.log(series.value)
 
 	const handleClick = (id) => {
 		currentVideo.value = id

@@ -9,7 +9,8 @@ export default defineNuxtConfig({
   },
   buildModules: [
     'nuxt-windicss',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@pinia/nuxt'
   ],
   modules: ['nuxt-use-motion'],
   build: {

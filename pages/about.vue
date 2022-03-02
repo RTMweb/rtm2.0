@@ -58,6 +58,9 @@
 
 <script setup>
 	import MainVideo from '~~/components/Video.vue'
+	import { useStore } from '@/stores/sermonsStore'
+
+	const store = useStore()
 </script>
 
 <style scoped lang="scss">
