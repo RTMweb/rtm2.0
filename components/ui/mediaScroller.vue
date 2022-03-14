@@ -1,8 +1,9 @@
 <template>
-	<div>
+	<div class="container">
 		<div ref="mediaScroller" class="media-scroller snaps-inline">
 			<slot></slot>
 		</div>
+		<button @click="slideLeft">Slide left</button>
 		<button @click="slideRight">Slide right</button>
 	</div>
 </template>
@@ -11,6 +12,9 @@
 	import { ref } from 'vue'
 	const mediaScroller = ref()
 
+	const slideLeft = () => {
+		mediaScroller.value.scrollLeft -= 250
+	}
 	const slideRight = () => {
 		mediaScroller.value.scrollLeft += 250
 	}

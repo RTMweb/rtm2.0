@@ -21,6 +21,7 @@
 						Truth is only found in the Word of God - it does not change and it
 						just is.
 					</p>
+					<nuxtLink to="/ourbeliefs">Our Beliefs</nuxtLink>
 				</div>
 				<div>
 					<h3>Our Values</h3>
@@ -46,19 +47,14 @@
 				</div>
 			</div>
 		</section>
-		<section class="py-20 bg-secondaryDark text-center">
-			<h2 class="mr-auto text-white font-bold text-2xl mb-4">
-				We firmly believe
-			</h2>
-			<BeliefSlider />
-		</section>
+
 		<VisionSlider />
 	</div>
 </template>
 
 <script setup>
-	import MainVideo from '~~/components/Video.vue'
-	import { useStore } from '@/stores/sermonsStore'
+	import VisionSlider from '../components/VisionSlider.vue'
+	import { useStore } from '../sermons'
 
 	const store = useStore()
 </script>

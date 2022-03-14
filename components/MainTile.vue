@@ -1,12 +1,12 @@
 <template>
 	<ClientOnly>
 		<div
-			class="main aspect-video grid w-full relative rounded-md content-end p-6 mb-4 dropshadow"
+			class="main aspect-video grid w-full relative rounded-md p-6 mb-4 dropshadow"
 			:style="{
 				backgroundImage: `url(${bgImg})`
 			}"
 		>
-			<div class="text-white">
+			<div class="text-white absolute bottom-7 left-6">
 				<div class="text-2xl font-extrabold title mb-2">
 					{{ title }}<br class="md:hidden" />
 					<span

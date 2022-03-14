@@ -1,11 +1,19 @@
 <template>
-	<swiper slidesPerView="1" @swiper="sermonSwiper" instanceName="sermon">
-		<swiper-slide v-for="(sermon, index) in series" key="index">
-			<Header :img="`/images/${sermon.id}.jpg`" />
-		</swiper-slide>
-	</swiper>
-	<div @click="prev()">prev</div>
-	<div @click="next()">next</div>
+	<div class="relative h-xl">
+		<div class="absolute top-1/2 left-10 z-10" @click="prev()">prev</div>
+		<div class="absolute top-1/2 right-10 z-10" @click="next()">next</div>
+		<swiper slidesPerView="1" @swiper="sermonSwiper" instanceName="sermon">
+			<swiper-slide v-for="(sermon, index) in series" key="index" class="">
+				<div
+					class="bg-red-400 bg-center bg-cover h-xl"
+					:style="{ backgroundImage: `url(/images/${sermon.id}.jpg)` }"
+				>
+					wevkwepknvpwknepvknwpeknvpnp
+				</div>
+				<!-- <img :src="`/images/${sermon.id}.jpg`" class="place-self-center" /> -->
+			</swiper-slide>
+		</swiper>
+	</div>
 </template>
 
 <script setup>

@@ -3,7 +3,7 @@
 		class="grid place-items-center relative"
 		@click="playing = !playing"
 		@mouseleave="playing = false"
-		@mouseover="playVideo"
+		@mouseover="playing = !playing"
 	>
 		<img
 			src="/HeroPastors.jpeg"
@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-	import { ref } from 'vue'
+	import { ref, onMounted } from 'vue'
 	import { useElementHover, useMediaControls } from '@vueuse/core'
 
 	const props = defineProps({
@@ -33,7 +33,7 @@
 		vid: { type: String }
 	})
 
-	const el = ref()
+	const el = ref(null)
 	const isHovered = useElementHover(el)
 
 	const { playing, currentTime, duration, volume } = useMediaControls(el, {
@@ -42,9 +42,11 @@
 
 	const hover = ref(false)
 
-	const playVideo = () => {
-		el.value.play()
-		hover = true
+	if (el.value) {
+		const playVideo = () => {
+			hover.value = true
+			el.value.play()
+		}
 	}
 </script>
 

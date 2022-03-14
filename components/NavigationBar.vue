@@ -12,12 +12,9 @@
 			<ul v-show="!mobile" class="navigation text-blue-gray-50">
 				<li v-for="(link, index) in navigationLinks" :key="index">
 					<a :href="link.destination" v-if="link.external">{{ link.name }}</a>
-					<nuxt-link
-						:to="link.destination"
-						class="link"
-						v-if="!link.external"
-						>{{ link.name }}</nuxt-link
-					>
+					<nuxt-link :to="link.destination" class="link" v-else>{{
+						link.name
+					}}</nuxt-link>
 				</li>
 			</ul>
 			<div class="icon">
@@ -33,22 +30,14 @@
 					<button class="" @click="toggleMobileNav">Close</button>
 					<button class="" href="/">Watch Now</button>
 
-					<!-- <div class="flex justify-between space-x-3">
-						<div v-for="(link, index) in iconNavigation" :key="index" class="">
-							<nuxt-link :to="link.destination" class="text-center">
-								<svg class="w-8 h-8">
-									<use
-										:xlink:href="`/images/icons/sprite.svg#icon-${link.icon}`"
-									></use>
-								</svg>
-								<div class="__text">{{ link.name }}</div>
-							</nuxt-link>
-						</div>
-					</div> -->
-
 					<div class="">
 						<div v-for="(link, index) in navigationLinks" :key="index">
-							<nuxt-link :to="link.destination">{{ link.name }}</nuxt-link>
+							<a :href="link.destination" v-if="link.external">{{
+								link.name
+							}}</a>
+							<nuxt-link :to="link.destination" class="link" v-else>{{
+								link.name
+							}}</nuxt-link>
 						</div>
 					</div>
 
@@ -84,7 +73,7 @@
 </script>
 
 <script setup>
-	import { ref, onMounted, onUpdated, computed } from 'vue'
+	import { ref, onMounted } from 'vue'
 
 	const scrolledNav = ref(null)
 	const mobile = ref(false)
