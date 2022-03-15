@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{ isFetching }}
 		<SeriesSlider :series="series" />
 		<mediaScroller>
 			<div v-for="msg in series" :key="msg.id" class="media-element">
@@ -20,7 +19,7 @@
 </template>
 
 <script setup>
-	import { ref, inject, provide } from 'vue'
+	import { ref, inject, provide, onBeforeMount } from 'vue'
 	import { useFetch } from '@vueuse/core'
 	import SeriesSlider from '../components/SermonSlider.vue'
 	import mediaScroller from '../components/ui/mediaScroller.vue'

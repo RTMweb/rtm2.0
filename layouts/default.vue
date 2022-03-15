@@ -1,9 +1,10 @@
 <template>
 	<div class="mainlayout">
 		<NavigationBar :navigation-links="navigationLinks" />
-
 		<div :style="{ marginTop: 5 + 'rem' }" class="">
-			<slot></slot>
+			<KeepAlive>
+				<slot></slot>
+			</KeepAlive>
 		</div>
 
 		<!-- <Footer :navigation-links="navigationLinks" /> -->

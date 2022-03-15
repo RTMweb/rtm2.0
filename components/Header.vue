@@ -33,7 +33,7 @@
 			},
 			img: {
 				type: String,
-				default: null
+				default: '/HeroPastors.jpeg'
 			}
 		}
 	}

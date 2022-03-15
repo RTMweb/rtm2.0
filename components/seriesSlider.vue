@@ -1,31 +1,33 @@
 <template>
-	<Swiper
-		:spaceBetween="20"
-		:breakpoints="{
-			640: { slidesPerView: 4 },
-			768: {
-				slidesPerView: 4
-			},
-			1024: {
-				slidesPerView: 4
-			}
-		}"
-	>
-		<swiper-slide v-for="(sermon, index) in series" key="index">
-			<div>
-				<div
-					class="main grid w-full relative rounded-md content-end p-4 mb-4"
-					:style="{
-						backgroundImage: `url(${sermon.image})`
-					}"
-				>
-					{{ sermon.title }}
+	<div>
+		<Swiper
+			:spaceBetween="20"
+			:breakpoints="{
+				640: { slidesPerView: 4 },
+				768: {
+					slidesPerView: 4
+				},
+				1024: {
+					slidesPerView: 4
+				}
+			}"
+		>
+			<swiper-slide v-for="(sermon, index) in series" key="index">
+				<div>
+					<div
+						class="main grid w-full relative rounded-md content-end p-4 mb-4"
+						:style="{
+							backgroundImage: `url(${sermon.image})`
+						}"
+					>
+						{{ sermon.title }}
+					</div>
 				</div>
-			</div>
-		</swiper-slide>
-	</Swiper>
-	<div @click="prev()">prev</div>
-	<div @click="next()">next</div>
+			</swiper-slide>
+		</Swiper>
+		<div @click="prev()">prev</div>
+		<div @click="next()">next</div>
+	</div>
 </template>
 
 <script setup>

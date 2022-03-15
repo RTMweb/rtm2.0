@@ -1,13 +1,11 @@
 <template>
 	<div>
-		<KeepAlive>
-			<Suspense>
-				<Video
-					vid="https://firebasestorage.googleapis.com/v0/b/revealing-truth-website.appspot.com/o/video%2FJan30.mp4?alt=media&token=4222ac50-4bef-4f91-8bfb-d0954fcd3c86"
-				/>
-				<template #fallback> Loading... </template>
-			</Suspense>
-		</KeepAlive>
+		<Suspense>
+			<Video
+				vid="https://firebasestorage.googleapis.com/v0/b/revealing-truth-website.appspot.com/o/video%2FJan30.mp4?alt=media&token=4222ac50-4bef-4f91-8bfb-d0954fcd3c86"
+			/>
+			<template #fallback> Loading... </template>
+		</Suspense>
 
 		<div class="max-w-screen-lg mx-auto mt-4 px-4">
 			<MainCard bg-img="/HeroPastors.jpeg" />

@@ -1,9 +1,6 @@
 <template>
 	<div>
-		<Header
-			:title="'Get Involved Page'"
-			:subtitle="'Get Involved Page Subtitle'"
-		/>
+		<Header title="Get Involved Page" subtitle="Get Involved Page Subtitle" />
 	</div>
 </template>
 

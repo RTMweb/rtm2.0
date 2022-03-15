@@ -1,18 +1,17 @@
 <template>
 	<div>
-		<header class="container aspect-video grid place-items-center pt-16">
-			<Suspense>
-				<iframe
-					ref="vid"
-					class="w-full aspect-video"
-					:src="`https://www.youtube.com/embed/${message}?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&color=white&controls=1`"
-					frameborder="0"
-					color="green"
-					allowfullscreen
-				>
-				</iframe>
-			</Suspense>
-		</header>
+		<div></div>
+		<Suspense>
+			<IFrame :message="message" />
+			<template #fallback>
+				<div class="lds-facebook">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</template>
+		</Suspense>
+
 		<div>
 			{{ messageData.title }}<br />
 			{{ messageData.pastor }}<br />
@@ -23,6 +22,8 @@
 </template>
 
 <script setup>
+	import IFrame from './IFrame.vue'
+	import { ref, inject } from 'vue'
 	const props = defineProps({
 		message: {
 			type: String
@@ -32,3 +33,43 @@
 		}
 	})
 </script>
+
+<style>
+	.lds-facebook {
+		display: inline-block;
+		position: relative;
+		width: 80px;
+		height: 80px;
+	}
+	.lds-facebook div {
+		display: inline-block;
+		position: absolute;
+		left: 8px;
+		width: 16px;
+		background: red;
+		animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+	}
+	.lds-facebook div:nth-child(1) {
+		left: 8px;
+		animation-delay: -0.24s;
+	}
+	.lds-facebook div:nth-child(2) {
+		left: 32px;
+		animation-delay: -0.12s;
+	}
+	.lds-facebook div:nth-child(3) {
+		left: 56px;
+		animation-delay: 0;
+	}
+	@keyframes lds-facebook {
+		0% {
+			top: 8px;
+			height: 64px;
+		}
+		50%,
+		100% {
+			top: 24px;
+			height: 32px;
+		}
+	}
+</style>

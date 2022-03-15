@@ -1,17 +1,19 @@
 <template>
-	<div class="h-md bg-primary">{{ place }}</div>
-	<div class="container mx-auto grid grid-cols-2">
-		<div>
+	<div>
+		<div class="h-md bg-primary">{{ place }}</div>
+		<div class="container mx-auto grid grid-cols-2">
 			<div>
-				Times<br />
-				Choose a time and add it to your calendar<br />
+				<div>
+					Times<br />
+					Choose a time and add it to your calendar<br />
+				</div>
+				<div>Location Info<br /></div>
+				<div>Campus Pastors<br /></div>
 			</div>
-			<div>Location Info<br /></div>
-			<div>Campus Pastors<br /></div>
-		</div>
-		<div>
-			<div>Video</div>
-			<div>Campus Pastors<br /></div>
+			<div>
+				<div>Video</div>
+				<div>Campus Pastors<br /></div>
+			</div>
 		</div>
 	</div>
 </template>
