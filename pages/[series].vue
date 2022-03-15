@@ -1,5 +1,5 @@
 <template>
-	<button @click="currentMessage = null">Back</button>
+	<button @click="currentMessage = null">Back Button</button>
 	<div>
 		<Watch
 			:message="currentMessage"
