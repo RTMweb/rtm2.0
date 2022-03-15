@@ -13,7 +13,7 @@
 				<div>
 					<h3>Our Beliefs</h3>
 					<p>
-						We believe in Simple Truth. Truth - In everyday language, it’s
+						We believ in Simple Truth. Truth - In everyday language, it’s
 						defined as being in one accord with fact or reality. Reality can
 						change. Facts are temporal. For Believers, Truth is much more than
 						that. Truth does not change. Truth just is - regardless of what the
