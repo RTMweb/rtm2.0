@@ -1,0 +1,6 @@
+<svg id="directions_car-black-18dp" xmlns="http://www.w3.org/2000/svg" width="35.042" height="35.042" viewBox="0 0 35.042 35.042">
+  <path id="Path_39" data-name="Path 39" d="M0,0H35.042V35.042H0Z" fill="none"/>
+  <path id="Path_40" data-name="Path 40" d="M26.244,6.475A2.182,2.182,0,0,0,24.171,5H8.11A2.2,2.2,0,0,0,6.037,6.475L3,15.221V26.9a1.464,1.464,0,0,0,1.46,1.46H5.92A1.464,1.464,0,0,0,7.38,26.9v-1.46H24.9V26.9a1.464,1.464,0,0,0,1.46,1.46h1.46a1.464,1.464,0,0,0,1.46-1.46V15.221ZM8.621,7.92H23.645l1.577,4.541H7.044Zm17.74,14.6H5.92v-7.3H26.361Z" transform="translate(1.38 2.3)" fill="#939393"/>
+  <circle id="Ellipse_9" data-name="Ellipse 9" cx="2" cy="2" r="2" transform="translate(9 19)" fill="#939393"/>
+  <circle id="Ellipse_10" data-name="Ellipse 10" cx="2" cy="2" r="2" transform="translate(22 19)" fill="#939393"/>
+</svg>

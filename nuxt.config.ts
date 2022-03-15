@@ -2,6 +2,7 @@ import { defineNuxtConfig } from 'nuxt3'
 
 
 export default defineNuxtConfig({
+  buildDir: './output',
   meta:{
     link:[
       {rel:"stylesheet", href:"https://pro.fontawesome.com/releases/v5.15.3/css/all.css"}

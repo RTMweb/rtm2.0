@@ -6,6 +6,9 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.1",
+    "firebase-functions-test": "^0.3.3",
     "nuxt-windicss": "^2.2.2",
     "nuxt3": "^3.0.0-27398533.8edd481",
     "sass": "^1.44.0",
@@ -19,6 +22,7 @@
     "@vueuse/core": "^7.5.5",
     "@vueuse/nuxt": "^7.5.5",
     "file-loader": "6.2.0",
+    "firebase": "^9.6.8",
     "nuxt-use-motion": "^2.0.0-beta.11",
     "pinia": "^2.0.11",
     "raw-loader": "4.0.2",

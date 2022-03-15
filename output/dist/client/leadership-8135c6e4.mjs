@@ -1,0 +1,1 @@
+import t from"./Header-c772f01f.mjs";import{_ as o,o as a,a as r,b as n}from"./bootstrap-002641b7.mjs";const s={};function c(_,p,i,d,l,m){const e=t;return a(),r("div",null,[n(e,{title:"Leadership Page",subtitle:"Leadership Page Subtitle"})])}var h=o(s,[["render",c]]);export{h as default};
