@@ -1,7 +1,9 @@
 <template>
-	<dir v-for="slide in slides" key="slide">
-		<p>{{ slide }}</p>
-	</dir>
+	<div class="container">
+		<dir v-for="slide in slides" key="slide">
+			<p>{{ slide }}</p>
+		</dir>
+	</div>
 </template>
 
 <script setup>

@@ -44,6 +44,7 @@
 						their lives. We believe truth transforms people into who God
 						destined them to be.
 					</p>
+					<nuxtLink to="/leadership">Our leadership</nuxtLink>
 				</div>
 			</div>
 		</section>

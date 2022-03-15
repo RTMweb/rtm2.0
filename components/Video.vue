@@ -1,13 +1,13 @@
 <template>
 	<div
-		class="grid place-items-center relative"
+		class="grid place-items-stretch relative overflow-hidden"
 		@click="playing = !playing"
 		@mouseleave="playing = false"
 		@mouseover="playing = !playing"
 	>
 		<img
 			src="/HeroPastors.jpeg"
-			class="absolute object-cover h-full z-10"
+			class="absolute object-cover z-10 min-h-full min-w-full w-auto h-auto"
 			alt=""
 			@mouseover="hover = true"
 			@mouseleave="hover = false"
