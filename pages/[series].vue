@@ -8,7 +8,7 @@
 		<SermonView :series="currentSeries[0]" v-else />
 
 		<div class="bg-dark-900 h-full text-white">
-			<button @click="currentMessage = null">Back Button</button>
+			<button @click="currentMessage = null">Back Back</button>
 			<div class="container">
 				<mediaScroller>
 					<div
