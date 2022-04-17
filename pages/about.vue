@@ -35,6 +35,7 @@
 						our culture because love is our resource; Truth which is our message
 						and Jesus, who is our way.
 					</p>
+					<nuxtLink to="/ourvalues">Our Values</nuxtLink>
 				</div>
 				<div>
 					<h3>Our Leadership</h3>

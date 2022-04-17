@@ -7,9 +7,7 @@
 				<div
 					class="bg-red-400 bg-center bg-cover h-xl"
 					:style="{ backgroundImage: `url(/images/${sermon.id}.jpg)` }"
-				>
-					wevkwepknvpwknepvknwpeknvpnp
-				</div>
+				></div>
 				<!-- <img :src="`/images/${sermon.id}.jpg`" class="place-self-center" /> -->
 			</swiper-slide>
 		</swiper>

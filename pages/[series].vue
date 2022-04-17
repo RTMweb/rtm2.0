@@ -27,54 +27,32 @@
 <script setup>
 	import Watch from '../components/Watch.vue'
 	import SermonView from '../components/SermonView.vue'
-	import { ref, inject, provide, onBeforeMount } from 'vue'
+	import { ref, inject } from 'vue'
 	import { useRoute } from 'vue-router'
-	import { useFetch } from '@vueuse/core'
-	import SeriesSlider from '../components/SermonSlider.vue'
-	import mediaScroller from '../components/ui/mediaScroller.vue'
+	import { useSeriesStore } from '../store/seriesStore'
 
+	import mediaScroller from '../components/ui/mediaScroller.vue'
 	const route = useRoute()
-	const playlist = ref()
+
+	const cm = useSeriesStore()
+
+	console.log(cm.currentMessage)
+
 	const messages = ref()
 	const series = inject('sermons')
 	const currentMessage = ref(null)
 	const currentMessageData = ref(null)
 
-	onBeforeMount(() => {
-		currentMessage.value = null
-	})
+	currentMessage.value = null
 
 	const currentSeries = series.filter(
 		(series) => series.id === route.params.series
 	)
+	const { data } = await useLazyAsyncData('messages', () =>
+		$fetch(`/api/youtube/${route.params.series}`)
+	)
 
-	const config = useRuntimeConfig()
-	const KEY = config.GOOGLE_KEY
-
-	const url = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=25&playlistId=${route.params.series}&key=${KEY}`
-
-	try {
-		const { data } = await useAsyncData('videos', () => $fetch(url))
-		// const { isFetching, error, data } = await useFetch(url)
-		playlist.value = data.value
-
-		messages.value = data.value.items.map((item) => {
-			return {
-				id: item.id,
-				resourceId: item.snippet.resourceId.videoId,
-				image: item.snippet.thumbnails.high.url,
-				title: item.snippet.title.split('|')[0],
-				description: item.snippet.description,
-				pastor: item.snippet.title.split('|')[2],
-				date: new Date(item.contentDetails.videoPublishedAt).toLocaleDateString(
-					'en-gb',
-					{ year: 'numeric', month: 'long', day: 'numeric' }
-				)
-			}
-		})
-	} catch (err) {
-		console.log(err)
-	}
+	messages.value = data.value
 
 	const handleClick = (message) => {
 		currentMessage.value = message.resourceId

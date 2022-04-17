@@ -158,6 +158,7 @@
 				align-items: center;
 
 				.logo {
+					fill: #fff;
 					@apply h-12 w-12 fill-[#fff];
 				}
 			}

@@ -19,19 +19,11 @@
 </template>
 
 <script setup>
-	import { ref, inject, provide, onBeforeMount } from 'vue'
-	import { useFetch } from '@vueuse/core'
+	import { inject } from 'vue'
 	import SeriesSlider from '../components/SermonSlider.vue'
 	import mediaScroller from '../components/ui/mediaScroller.vue'
 
 	const series = inject('sermons')
-
-	const config = useRuntimeConfig()
-	const KEY = config.GOOGLE_KEY
-
-	const url = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=25&playlistId=PLnoMLl1eIRc6mMrN3Tq5BbVREowKsiP2e&key=${KEY}`
-
-	const { isFetching, error, data } = await useFetch(url)
 </script>
 
 <style lang="scss" scoped>
@@ -42,17 +34,6 @@
 		background-position: center;
 	}
 
-	.media-scroller {
-		display: grid;
-		grid-template-rows: min-content;
-		grid-auto-flow: column;
-		grid-auto-columns: 27%;
-		gap: 1rem;
-		overflow-x: auto;
-		overscroll-behavior-inline: contain;
-		scroll-behavior: smooth;
-	}
-
 	.media-element {
 		padding: 1rem;
 
@@ -60,15 +41,6 @@
 			inline-size: 100%;
 			aspect-ration: 16 /9;
 			object-fit: cover;
-		}
-	}
-
-	.snaps-inline {
-		scroll-snap-type: inline mandatory;
-		scroll-padding: 2rem;
-
-		& > * {
-			scroll-snap-align: start;
 		}
 	}
 </style>
