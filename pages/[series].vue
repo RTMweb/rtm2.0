@@ -10,15 +10,17 @@
 		<div class="bg-dark-900 h-full text-white">
 			<button @click="currentMessage = null">Back Back</button>
 			<div class="container">
-				<mediaScroller>
-					<div
-						v-for="message in messages"
-						key="message.id"
-						@click="handleClick(message)"
-					>
-						<img :src="message.image" />
-					</div>
-				</mediaScroller>
+				<Suspense>
+					<mediaScroller>
+						<div
+							v-for="message in messages"
+							key="message.id"
+							@click="handleClick(message)"
+						>
+							<img :src="message.image" />
+						</div>
+					</mediaScroller>
+				</Suspense>
 			</div>
 		</div>
 	</div>
@@ -27,7 +29,7 @@
 <script setup>
 	import Watch from '../components/Watch.vue'
 	import SermonView from '../components/SermonView.vue'
-	import { ref, inject } from 'vue'
+	import { ref, inject, onMounted } from 'vue'
 	import { useRoute } from 'vue-router'
 	import { useSeriesStore } from '../store/seriesStore'
 
@@ -48,13 +50,14 @@
 	const currentSeries = series.filter(
 		(series) => series.id === route.params.series
 	)
-	const { data } = await useLazyAsyncData('messages', () =>
-		$fetch(`/api/youtube/${route.params.series}`)
-	)
+	const { data } = await useFetch(`/api/youtube/${route.params.series}`)
 
 	messages.value = data.value
 
 	const handleClick = (message) => {
+		cm.$patch((state) => {
+			state.currentMessage = message.resourceId
+		})
 		currentMessage.value = message.resourceId
 		currentMessageData.value = message
 	}
