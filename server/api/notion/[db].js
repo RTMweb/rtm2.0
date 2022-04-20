@@ -1,8 +1,11 @@
 import { Client } from '@notionhq/client'
+import { useRuntimeConfig } from '#nitro'
+
+const config = useRuntimeConfig()
 
 // Initializing a client
 const notion = new Client({
-	auth: process.env.NOTION_KEY
+	auth: config.notionKey
 })
 
 export default defineEventHandler(async (event) => {

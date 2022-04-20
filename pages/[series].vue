@@ -1,64 +1,57 @@
 <template>
-	<div>
-		<Watch
-			:message="currentMessage"
-			:messageData="currentMessageData"
-			v-if="currentMessage"
-		/>
-		<SermonView :series="currentSeries[0]" v-else />
+  <div>
+    <Watch
+      :message="currentMessage"
+      :messageData="currentMessageData"
+      v-if="currentMessage"
+    />
+    <SermonView :series="currentSeries[0]" v-else />
 
-		<div class="bg-dark-900 h-full text-white">
-			<button @click="currentMessage = null">Back Back</button>
-			<div class="container">
-				<Suspense>
-					<mediaScroller>
-						<div
-							v-for="message in messages"
-							key="message.id"
-							@click="handleClick(message)"
-						>
-							<img :src="message.image" />
-						</div>
-					</mediaScroller>
-				</Suspense>
-			</div>
-		</div>
-	</div>
+    <div class="bg-dark-900 h-full text-white">
+      <button @click="currentMessage = null">Back Back</button>
+      <div class="container">
+        <mediaScroller>
+          <div v-for="message in messages" key="message.id" class="z-20 cursor-pointer">
+            <img :src="message.image" @click="handleClick(message)" />
+          </div>
+        </mediaScroller>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-	import Watch from '../components/Watch.vue'
-	import SermonView from '../components/SermonView.vue'
-	import { ref, inject, onMounted } from 'vue'
-	import { useRoute } from 'vue-router'
-	import { useSeriesStore } from '../store/seriesStore'
+import Watch from "../components/Watch.vue";
+import SermonView from "../components/SermonView.vue";
 
-	import mediaScroller from '../components/ui/mediaScroller.vue'
-	const route = useRoute()
+// import { useRoute } from "vue-router";
+// import { useSeriesStore } from "../store/seriesStore";
 
-	const cm = useSeriesStore()
+import mediaScroller from "../components/ui/mediaScroller.vue";
+const route = useRoute();
 
-	console.log(cm.currentMessage)
+// const cm = useSeriesStore();
 
-	const messages = ref()
-	const series = inject('sermons')
-	const currentMessage = ref(null)
-	const currentMessageData = ref(null)
+// const test = ref(true);
+// console.log(cm.currentMessage);
 
-	currentMessage.value = null
+const messages = ref();
+const series = inject("sermons");
+const currentMessage = ref(null);
+const currentMessageData = ref(null);
 
-	const currentSeries = series.filter(
-		(series) => series.id === route.params.series
-	)
-	const { data } = await useFetch(`/api/youtube/${route.params.series}`)
+currentMessage.value = null;
 
-	messages.value = data.value
+const currentSeries = series.filter((series) => series.id === route.params.series);
+const { data } = await useFetch(`/api/youtube/${route.params.series}`);
 
-	const handleClick = (message) => {
-		cm.$patch((state) => {
-			state.currentMessage = message.resourceId
-		})
-		currentMessage.value = message.resourceId
-		currentMessageData.value = message
-	}
+messages.value = data.value;
+
+const handleClick = (message) => {
+  // cm.$patch((state) => {
+  //   state.currentMessage = message.resourceId;
+  // });
+  currentMessage.value = message.resourceId;
+  currentMessageData.value = message;
+};
 </script>

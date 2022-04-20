@@ -31,7 +31,6 @@
 </template>
 
 <script setup>
-	import { onMounted } from 'vue'
 	import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 	import { Swiper, SwiperSlide } from 'swiper/vue'
 	import 'swiper/css'

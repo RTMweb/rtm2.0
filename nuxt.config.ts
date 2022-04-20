@@ -8,21 +8,17 @@ export default defineNuxtConfig({
     ]
   },
   buildModules: [
-    'nuxt-windicss',
+    '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@pinia/nuxt'
+    'nuxt-windicss',
   ],
-  modules: ['nuxt-use-motion'],
-  build: {
-    transpile: ['vue-agile'],
+  runtimeConfig: {
+    notionKey: process.env.NOTION_KEY, // variables that can only be accessed on server-side
+    notionDB: process.env.NOTION_DB, // variables that can only be accessed on server-side
+    public: {
+      googleKey: process.env.GOOGLE_KEY,
+      BASE_URL: process.env.BASE_URL || 'https://nuxtjs.org'
+    }
   },
-  vite:{
-    server: {
-      
-	  }
-  },
-  publicRuntimeConfig: {
-    GOOGLE_KEY: process.env.GOOGLE_KEY
-  }
-  
+  // modules: ['nuxt-use-motion'],
 })

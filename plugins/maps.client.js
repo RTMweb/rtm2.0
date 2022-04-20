@@ -1,10 +1,13 @@
 import { defineNuxtPlugin } from '#app'
+import { useRuntimeConfig } from '#nitro'
+
+const config = useRuntimeConfig().public
 
 export default defineNuxtPlugin((nuxtApp) => {
 	let mapLoaded = false
 	let mapWaiting = null
 
-	const KEY = nuxtApp.$config.GOOGLE_KEY
+	const KEY = config.googleKey
 	addScript()
 	return {
 		provide: {

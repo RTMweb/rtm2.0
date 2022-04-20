@@ -1,1 +1,0 @@
-import{_ as n,o,a,d as t,t as r}from"./bootstrap-002641b7.mjs";const s={props:{title:{type:String,required:!0},body:{type:String,required:!0}}};function i(l,c,e,d,p,u){return o(),a("div",null,[t("h3",null,r(e.title),1),t("p",null,r(e.body),1)])}var f=n(s,[["render",i]]);export{f as default};

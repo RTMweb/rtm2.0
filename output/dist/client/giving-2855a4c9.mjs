@@ -1,1 +1,0 @@
-import t from"./Header-c772f01f.mjs";import{_ as o,o as n,a,b as r}from"./bootstrap-002641b7.mjs";const c={};function i(_,s,p,l,m,u){const e=t;return n(),a("div",null,[r(e,{title:"Giving Page",subtitle:"Giving Page Subtitle"})])}var g=o(c,[["render",i]]);export{g as default};

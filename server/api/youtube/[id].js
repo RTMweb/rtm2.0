@@ -1,7 +1,9 @@
-// import config from '#config'
+import { useRuntimeConfig } from '#nitro'
+
+const config = useRuntimeConfig().public
 
 export default defineEventHandler(async (event) => {
-	const KEY = process.env.GOOGLE_KEY
+	const KEY = config.googleKey
 
 	const id = event.context.params.id
 

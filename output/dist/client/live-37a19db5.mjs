@@ -1,1 +1,0 @@
-import{_ as e,o as c,a as t}from"./bootstrap-002641b7.mjs";const a={},r={class:"container h-md grid place-items-center mt-4"};function o(s,n){return c(),t("header",r,"hello")}var d=e(a,[["render",o],["__scopeId","data-v-17b70316"]]);export{d as default};
