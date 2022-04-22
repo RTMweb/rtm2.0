@@ -62,15 +62,9 @@ const { data } = await useAsyncData("feature", () =>
 
 console.log(data);
 
-const props = defineProps({
-  poster: { type: String },
-  // vid: { type: String },
-});
-
 const el = ref(null);
-const isHovered = useElementHover(el);
 
-const { playing, currentTime, duration, volume } = useMediaControls(el, {
+const { playing } = useMediaControls(el, {
   src: data.value.video,
 });
 
