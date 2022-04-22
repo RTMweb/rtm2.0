@@ -7,6 +7,7 @@ specifiers:
   '@originjs/vite-plugin-commonjs': ^1.0.1
   '@pinia/nuxt': ^0.1.8
   '@vueuse/core': ^8.3.1
+  '@vueuse/head': ^0.7.6
   '@vueuse/motion': ^2.0.0-beta.12
   '@vueuse/nuxt': ^8.2.6
   file-loader: 6.2.0
@@ -40,6 +41,7 @@ dependencies:
   '@originjs/vite-plugin-commonjs': 1.0.3
   '@pinia/nuxt': 0.1.8_pinia@2.0.13+vue@3.2.33
   '@vueuse/core': 8.3.1_vue@3.2.33
+  '@vueuse/head': 0.7.6_vue@3.2.33
   '@vueuse/motion': 2.0.0-beta.12_vue@3.2.33
   '@vueuse/nuxt': 8.2.6_83298cc9d1ace117312ca78455de4e89
   file-loader: 6.2.0_webpack@5.72.0
