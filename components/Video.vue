@@ -1,6 +1,7 @@
 <template>
   <section>
     <div
+      v-if="data.video"
       class="grid place-items-center relative overflow-hidden bg-dark-800"
       @click="playing = !playing"
       @mouseleave="playing = false"
@@ -27,6 +28,7 @@
         :class="{ fade: hover }"
       ></div>
       <video
+        v-if="data.video"
         ref="el"
         class="aspect-video max-h-2xl w-full"
         style="object-fit: contain"
@@ -35,6 +37,21 @@
         Your browser does not support HTML5 video.
       </video>
     </div>
+    <div v-else class="grid place-items-center relative overflow-hidden bg-dark-800">
+      <div class="absolute container mx-auto text-light-50 grid self-end z-20 mb-20">
+        <div class="flex items-center flex-grow-0">
+          <p class="series">{{ data.series }}</p>
+          <div>|</div>
+          <p class="title">{{ data.message }}</p>
+        </div>
+        <button class="btn btn-yellow w-44">Watch Message</button>
+      </div>
+      <div
+        :src="data.imageLink"
+        class="absolute object-cover z-10 min-h-full min-w-full w-auto h-auto bg-top bg-cover"
+        :style="{ backgroundImage: 'url(' + data.imageLink + ')' }"
+      ></div>
+    </div>
   </section>
 </template>
 
@@ -42,6 +59,8 @@
 const { data } = await useAsyncData("feature", () =>
   $fetch("/api/notion/4b3f8755b9f646d6ad74f12cc745dc68")
 );
+
+console.log(data);
 
 const props = defineProps({
   poster: { type: String },
