@@ -10,9 +10,9 @@
 
     <ThreeCol class="mt-4 px-4">
       <template #left>
-        <div v-for="tile in tiles">
+        <div v-for="tile in tiles" key="tile.id">
           <MainTile
-            :bg-img="tile.bgimg"
+            :bg-img="tile.bgImg"
             :title="tile.title"
             :subtitle="tile.subtitle"
             :subtext="tile.smalltitle"
@@ -31,6 +31,9 @@
 import ThreeCol from "../components/layoutUtils/threeCol.vue";
 import MainTile from "../components/MainTile.vue";
 import SideMenu from "../components/sidemenu/SideMenu.vue";
+const { pending, data: tiles } = await useAsyncData("tiles", () =>
+  $fetch("/api/homeTiles")
+);
 
-const tiles = inject("hometiles");
+console.log(tiles.value);
 </script>

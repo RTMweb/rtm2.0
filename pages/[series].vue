@@ -30,11 +30,6 @@ import SermonView from "../components/SermonView.vue";
 import mediaScroller from "../components/ui/mediaScroller.vue";
 const route = useRoute();
 
-// const cm = useSeriesStore();
-
-// const test = ref(true);
-// console.log(cm.currentMessage);
-
 const messages = ref();
 const series = inject("sermons");
 const currentMessage = ref(null);

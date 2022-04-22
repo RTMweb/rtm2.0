@@ -21,6 +21,7 @@ export default defineEventHandler(async (event) => {
 		})
 
 		const item = {
+			id: response.results[0].id,
 			series: response.results[0].properties.series.rich_text[0].plain_text,
 			message: response.results[0].properties.message.rich_text[0].plain_text,
 			imageLink:
