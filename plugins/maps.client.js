@@ -1,9 +1,8 @@
 import { defineNuxtPlugin } from '#app'
-import { useRuntimeConfig } from '#nitro'
-
-const config = useRuntimeConfig().public
 
 export default defineNuxtPlugin((nuxtApp) => {
+	const config = useRuntimeConfig().public
+
 	let mapLoaded = false
 	let mapWaiting = null
 

@@ -8,7 +8,8 @@
   "devDependencies": {
     "nuxt-windicss": "^2.2.2",
     "sass": "^1.44.0",
-    "vite-plugin-svg-icons": "^2.0.1"
+    "vite-plugin-svg-icons": "^2.0.1",
+     "nuxt": "npm:nuxt3@latest"
   },
   "dependencies": {
     "@notionhq/client": "^1.0.4",
@@ -25,7 +26,7 @@
     "install": "^0.13.0",
     "install-peers": "^1.0.3",
     "nuxt-use-motion": "^2.0.0-beta.11",
-    "nuxt3": "^3.0.0-27506322.90da56a",
+    "nuxt3": "^3.0.0-rc.1",
     "pinia": "^2.0.13",
     "postcss": "^8.4.12",
     "postcss-loader": "^6.2.1",
