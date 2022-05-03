@@ -1,16 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container px-4 relative">
     <Swiper
       :breakpoints="{
         640: { slidesPerView: 1, spaceBetween: 20 },
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 1,
-          spaceBetween: 100,
-        },
       }"
       @swiper="visionSwiper"
       @reachEnd="end = false"
@@ -19,14 +11,23 @@
       @slideChange="onSlideChange"
     >
       <swiper-slide v-for="(slide, index) in slides" :key="index">
-        <div class="grid place-content-center border-accent">
-          {{ slide.title }}<br />
-          {{ slide.text }}
+        <div
+          class="content-center justify-center border-accent max-w-[600px] mx-auto py-auto"
+        >
+          <h3>{{ slide.title }}</h3>
+          <p>
+            {{ slide.text }}
+          </p>
         </div>
       </swiper-slide>
     </Swiper>
-    <div class="w-full flex">
-      <div class="btn mr-auto flex items-center" v-show="start" @click="prev()">
+    <div
+      class="flex justify-center text-[rgba(121, 121, 121, var(--tw-text-opacity))] max-w-[600px] mx-auto mt-6 lg:mt-10"
+    >
+      {{ activeSlide + 1 }} of {{ slides.length }}
+    </div>
+    <div class="lg:(absolute top-[50%] left-0 w-full mt-0) flex mt-4 z-10 px-4">
+      <div class="mr-auto flex items-center border-none" v-show="start" @click="prev()">
         <div>
           <svg class="prev">
             <use xlink:href="/images/icons/sprite.svg#triangle"></use>
@@ -35,7 +36,7 @@
         {{ backText }}
       </div>
 
-      <div class="btn ml-auto flex items-center" v-show="end" @click="next()">
+      <div class="ml-auto flex items-center border-none" v-show="end" @click="next()">
         {{ nextText }}
         <div>
           <svg class="next">
@@ -115,16 +116,32 @@ const nextText = computed(() => {
 .next {
   height: 30px;
   width: 30px;
-  fill: red;
+  fill: #0060a6;
   transform: rotate(90deg);
 }
 .prev {
   height: 30px;
   width: 30px;
-  fill: red;
+  fill: #0060a6;
   transform: rotate(-90deg);
 }
 .swiper-slide {
   width: 375px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(77, 77, 77, var(--tw-text-opacity));
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+  --tw-text-opacity: 1;
+  color: rgba(121, 121, 121, var(--tw-text-opacity));
 }
 </style>

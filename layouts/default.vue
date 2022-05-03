@@ -7,7 +7,7 @@
       </KeepAlive>
     </div>
 
-    <!-- <Footer :navigation-links="navigationLinks" /> -->
+    <Footer :navigation-links="navigationLinks" />
   </div>
 </template>
 
@@ -245,5 +245,21 @@ provide("locations", locations.value);
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 100%;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(77, 77, 77, var(--tw-text-opacity));
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+  --tw-text-opacity: 1;
+  color: rgba(121, 121, 121, var(--tw-text-opacity));
 }
 </style>

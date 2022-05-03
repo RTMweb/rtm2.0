@@ -24,9 +24,6 @@
 import Watch from "../components/Watch.vue";
 import SermonView from "../components/SermonView.vue";
 
-// import { useRoute } from "vue-router";
-// import { useSeriesStore } from "../store/seriesStore";
-
 import mediaScroller from "../components/ui/mediaScroller.vue";
 const route = useRoute();
 

@@ -3,10 +3,10 @@
     <div>
       <Header title="Get Involved Page" subtitle="Get Involved Page Subtitle" />
     </div>
-    <div class="container grid grid-cols-2 gap-8">
+    <div class="container grid grid-cols-2 gap-8 mt-8">
       <figure v-for="card in cards" key="card.heading">
         <img :src="card.img" alt="" class="rounded-xl" />
-        <h2>{{ card.heading }}</h2>
+        <h3>{{ card.heading }}</h3>
         <p>
           {{ card.text }}
         </p>

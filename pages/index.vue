@@ -34,6 +34,4 @@ import SideMenu from "../components/sidemenu/SideMenu.vue";
 const { pending, data: tiles } = await useAsyncData("tiles", () =>
   $fetch("/api/homeTiles")
 );
-
-console.log(tiles.value);
 </script>

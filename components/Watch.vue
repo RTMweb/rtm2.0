@@ -1,16 +1,6 @@
 <template>
   <div>
-    <div></div>
-    <Suspense>
-      <IFrame :message="message" />
-      <template #fallback>
-        <div class="lds-facebook">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </template>
-    </Suspense>
+    <IFrame :message="message" />
 
     <div>
       {{ messageData.title }}<br />
